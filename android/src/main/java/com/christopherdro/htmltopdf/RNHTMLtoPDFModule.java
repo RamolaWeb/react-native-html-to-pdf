@@ -79,7 +79,7 @@ public class RNHTMLtoPDFModule extends ReactContextBaseJavaModule {
         destinationFile = getTempFile(fileName);
       }
 
-      PrintAttributes pagesize=null;
+      PrintAttributes pagesize= new PrintAttributes.Builder().setMinMargins(new PrintAttributes.Margins(0,0,0,0)).build();
       if(options.hasKey(HEIGHT) && options.hasKey(WIDTH)) {
         pagesize=new PrintAttributes.Builder()
                 .setMediaSize(new PrintAttributes.MediaSize("custom","CUSTOM",
