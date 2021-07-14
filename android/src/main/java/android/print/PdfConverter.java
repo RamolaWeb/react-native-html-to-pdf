@@ -162,7 +162,7 @@ public class PdfConverter implements Runnable {
         return new PrintAttributes.Builder()
                 .setMediaSize(PrintAttributes.MediaSize.NA_LETTER)
                 .setResolution(new PrintAttributes.Resolution("RESOLUTION_ID", "RESOLUTION_ID", 600, 600))
-                .setMinMargins(PrintAttributes.Margins.NO_MARGINS)
+                .setMinMargins(new PrintAttributes.Margins(0,0,0,0))
                 .build();
 
     }
